@@ -36,6 +36,20 @@ extern "C" {
 
 #include <stdio.h>
 
+#ifdef HAVE_STDINT_H
+#include <stdint.h>
+#else
+#ifndef _WIN32
+
+#endif
+#endif
+
+#ifdef _WIN32
+#include <limits.h>
+#define UINTMAX_MAX UINT_MAX
+#define INT32_MAX   _I32_MAX
+#endif
+
   /*****************************************************
    *         DATA STRUCTURES and DEFINITIONS
    *****************************************************/
@@ -765,9 +779,9 @@ extern "C" {
     PROPptr networkprops;              /* First network property */
     PARSE_TBL upper_parse_table;
     PARSE_TBL lower_parse_table;
-    ULONG num_states;                  /* Number of states */
-    ULONG num_arcs;                    /* Number of arcs */
-    ULONG block_size;
+    uintptr_t num_states;                  /* Number of states */
+    uintptr_t num_arcs;                    /* Number of arcs */
+    uintptr_t block_size;
     ALPHABETptr flag_register;
     void *client_cell;
     void *mmap_handle;
@@ -955,6 +969,8 @@ extern "C" {
 
   typedef struct LOCATION_IN_NET LOCATIONtype, *LOCATIONptr;
 
+  typedef struct LODATION_PATH LOCATION_PATHtype, *LOCATION_PATHptr;
+
   typedef struct IO_SEQUENCE IO_SEQtype, *IO_SEQptr;
 
   typedef struct IO_SEQUENCE_TABLE IO_SEQ_TABLEtype, *IO_SEQ_TABLEptr;
@@ -1030,6 +1046,7 @@ extern "C" {
       int retokenize;
       int show_flags;
       int max_state_visits;
+      int max_recursion;
       int count_patterns;
       int delete_patterns;
       int extract_patterns;
@@ -1145,7 +1162,7 @@ extern "C" {
   void char_to_page(char c, PAGEptr page);
   /* Appends the character to the page. */
 
-  void int_to_page(long i, int watch_rm, PAGEptr page);
+  void int_to_page(uintptr_t i, int watch_rm, PAGEptr page);
   /* Writes the integer to the page. If the second argument is WATCH_RM,
      an eol_string is inserted first if needed to avoid exceeding the
      right margin. If the second argument is DONT_WATCH_RM, the
@@ -1230,7 +1247,7 @@ extern "C" {
      Map: Default. If the page argument is NULL, a new page is
      created. */
 
-  PAGEptr time_to_page(long start, long end, PAGEptr page);
+  PAGEptr time_to_page(intptr_t start, intptr_t end, PAGEptr page);
   /* Prints the difference between end and start times to the page in
      terms of seconds, minutes, and hours. and returns the page. If
      the page argument is NULL, a new page is created. */
@@ -1270,6 +1287,16 @@ extern "C" {
      Returns the length of the string on success, -1 on error.  Not
      implemented for vectorized or compacted networks. */
 
+  typedef struct TALLY TALLYcell, *TALLYptr;
+
+  /* Label statistics */
+
+  typedef struct LABEL_STATS {
+    id_type max_label;
+    int tally_size;
+    TALLYptr tally;
+  } LABEL_STATStype, *LABEL_STATSptr;
+
   typedef struct CFSM_CONTEXT {
     int mode ;
     int reclaimable;
@@ -1282,6 +1309,9 @@ extern "C" {
     ERROR_STREAM errorstream;
 
     IntParPtr interface;
+
+    struct LABEL_STATS label_stats;
+
     struct temporary_buffers {
       STRING_BUFFERptr string_buffer;
       STRING_BUFFERptr fat_str_buffer;
@@ -1312,7 +1342,7 @@ extern "C" {
       int max_path_index_pos ;         /* MAX_PATH_INDEX_POS */
       int path_index_incr ;            /* PATH_INDEX_INCR */
       int path_index_pos ;             /* PATH_INDEX_POS */
-      long int *path_index_vector ;    /* PATH_INDEX_VECTOR */
+      intptr_t *path_index_vector ;    /* PATH_INDEX_VECTOR */
     } index ;
     struct parse_parameters_and_data
     {
@@ -1569,14 +1599,16 @@ extern "C" {
     int level;
     int depth;
     int num_inputs;          /* number of processed inputs */
-    char *eol_string;        /* defaults to "\n" */
+    const char *eol_string;  /* defaults to "\n" */
     int end_of_input;        /* end of input file or string */
+    int longest_match;       /* longest pattern match found */
     int max_recursion_depth;
     PARSE_TBL parse_table;   /* Maps input symbol to a symbol ID */
     int (*next_symbol_fn)(id_type *, void *); /* fetches the next input ID */
     void (*write_buffer_fn)(void *);  /* Function to write into out_buffer */
     id_type (*in_fn)(id_type);        /* lower_id() or upper_id() */
     id_type (*out_fn)(id_type);       /* upper_id() or lower_id() */
+    id_type prev_sym;
     MATCH_TABLEptr match_table;
     unsigned char *input;             /* current input string */
     unsigned char *remainder;         /* remaining part of the input string */
@@ -1606,7 +1638,7 @@ extern "C" {
     STRING_BUFFERptr out_buffer;
     STRING_BUFFERptr save_buffer;
     void *hyper_unit;
-    unsigned long file_pos;
+    uintptr_t file_pos;
 
     LAB_VECTORptr other_than_vector;
 
@@ -1624,8 +1656,8 @@ extern "C" {
     STATEptr solution_tree;  /* For storing the final result in a tree
                                 instead of the table. */
     LAB_RINGptr input_ring;
-    LOCATIONptr location_heap; /* Working space for apply_vectorized_network */
-
+    LOCATION_PATHptr location_path; /* Application path in a network. */
+    int location_path_length;  /* Size of location path */
     HEAPptr task_heap;         /* Heap for iterative_apply_patterns() */
     STACKptr task_stack;       /* Stack for iterative apply_patterns() */
     STATEptr state;
@@ -1797,9 +1829,8 @@ extern "C" {
      using this API needs to call this function before calling any
      cfsm functions or macros. */
 
-	void reclaim_cfsm(void);
-	//void reclaim_cfsm(FST_CNTXTptr);
-	/* Releases all the memory allocated to the CFSM_CONTEXT and all other
+  void reclaim_cfsm(FST_CNTXTptr fst_cntxt);
+  /* Releases all the memory allocated to the CFSM_CONTEXT and all other
      data structures declared within the context such as stacks, heaps,
      networks, states, arcs and alphabets. */
 
@@ -1813,18 +1844,18 @@ extern "C" {
 
   /* Binary output functions */
 
-  int save_net(NETptr net, char *filename);
+  int save_net(NETptr net, char *filename, FST_CNTXTptr fst_cntxt);
   /* Saves a single net in the Xerox proprietary binary format. Returns
      0 on success and an error code if something goes wrong. */
 
-  int save_nets(NVptr nv, char *filename);
+  int save_nets(NVptr nv, char *filename, FST_CNTXTptr fst_cntxt);
   /* Saves any number of nets packaged into a net vector. Returns 0 on
      success and an error code if something goes wrong. A net vector
      is created calling make_nv(n) where n is the number of slots in
      the vector. The statement NV_net(nv, 0) = net; puts net into the
      first slot of the nv. */
 
-  int save_defined_nets(char *filename);
+  int save_defined_nets(char *filename, FST_CNTXTptr fst_cntxt);
   /* Saves all the networks that have been bound to a name using either the
      define_net() or define_regex_net() function. Return 0 on success and an
      error code on failure. When the nets are loaded
@@ -1834,22 +1865,22 @@ extern "C" {
 
   /* Binary input functions */
 
-  NETptr load_net(const char *filename, CFSM_CONTEXT *fst_cntxt);
+  NETptr load_net(const char *filename, FST_CNTXTptr fst_cntxt);
   /* Loads a single network from the file. If the file contains more than
-     one network, only the first one is loaded. Returns the network on
+     one network, only the first one is loaded. Returns the network ono
      success and NULL on error. */
 
-  NVptr load_nets(const char *filename);
+  NVptr load_nets(const char *filename, FST_CNTXTptr fst_cntxt);
   /* Loads any number of networks from the file. Returns a net vector on
      success and NULL on error. */
 
-  int load_defined_nets(char *filename);
+  int load_defined_nets(char *filename, FST_CNTXTptr fst_cntxt);
   /* Loads any number of networks saved by save_defined_nets(). Each
      network has on its property list the name it was defined as. The
      definitions are restored. Returns 0 on success, 1 on error. Prints
      a warning message if some of the networks have not been defined. */
 
-  NETptr load_defined_net(char *name, char *filename);
+  NETptr load_defined_net(char *name, char *filename, FST_CNTXTptr fst_cntxt);
   /* Loads any number of networks saved by save_defined_nets() and
      restores the definitions. Returns a copy of the network with the given
      name if it is one of the networks or NULL in case the file does not

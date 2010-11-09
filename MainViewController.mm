@@ -11,7 +11,7 @@
 
 @implementation MainViewController
 
-@synthesize listContent, savedListContent, savedSearchTerm, searchWasActive, fstInterface, hiraganaFstInterface, phraseView;
+@synthesize listContent, savedListContent, savedSearchTerm, searchWasActive, phraseView;
 
 
 #pragma mark - 
@@ -53,7 +53,6 @@
 {
 	[listContent release];
 	[savedListContent release];
-	self.fstInterface.destroy();
 	
 	[super dealloc];
 }
@@ -130,12 +129,57 @@
 #pragma mark Format Search String
 - (NSString*)formatSearchString:(NSString*)stringToFormat
 {
-	char *results = self.hiraganaFstInterface.getApplyResultsDown([stringToFormat UTF8String]);
-	NSString *nsresults = [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
-	if ([nsresults length] == 0 || [nsresults isEqualToString:@"\n"]) {
-		return stringToFormat;
+	XFSMInterface hiraganaFstInterface;
+	char *path = "kr_converter.fst";
+	// Reformat the path while passing it to the func
+	bool success = hiraganaFstInterface.initializeWithFSTName(path);
+	if (success) {
+		// What here?
+		char *results = hiraganaFstInterface.getApplyResultsDown([stringToFormat UTF8String]);
+		NSString *nsresults = [[[NSString alloc] init] autorelease];
+		if (results) {
+			nsresults = [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
+		}
+		
+		hiraganaFstInterface.destroy();
+		
+		if ([nsresults length] == 0 || [nsresults isEqualToString:@"\n"]) {
+			return stringToFormat;
+		} else {
+			return nsresults;
+		}
 	} else {
-		return [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
+		// Throw errors
+		return stringToFormat;
+	}
+}
+
+#pragma mark -
+#pragma mark Format Search String
+- (NSString*)convertToHiragana:(NSString*)stringToFormat
+{
+	XFSMInterface hiraganaFstInterface;
+	char *path = "rk_converter.fst";
+	// Reformat the path while passing it to the func
+	bool success = hiraganaFstInterface.initializeWithFSTName(path);
+	if (success) {
+		// What here?
+		char *results = hiraganaFstInterface.getApplyResultsDown([stringToFormat UTF8String]);
+		NSString *nsresults = [[[NSString alloc] init] autorelease];
+		if (results) {
+			nsresults = [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
+		}
+		
+		hiraganaFstInterface.destroy();
+		
+		if ([nsresults length] == 0 || [nsresults isEqualToString:@"\n"]) {
+			return stringToFormat;
+		} else {
+			return nsresults;
+		}
+	} else {
+		// Throw errors
+		return stringToFormat;
 	}
 }
 
@@ -147,16 +191,30 @@
 	[self.listContent removeAllObjects];
 	
 	// Format the input string
-	searchText = [self formatSearchString:searchText];
 	self.savedSearchTerm = searchText;
+	searchText = [self formatSearchString:searchText];
 	
 	NSArray *searchTextArray = [searchText componentsSeparatedByString:@"\n"];
+	
+	// Set up the FST interfacer
+	// First, set the path to the FST
+	char *path = "full.fst";
+	XFSMInterface fstInterface;
+	
+	// Reformat the path while passing it to the func
+	bool success = fstInterface.initializeWithFSTName(path);
+	
+	if (success) {
+		// Huh?
+	} else {
+		// Throw errors
+	}
 	
 	// Loop
 	for (NSString *searchItem in searchTextArray) {
 		if ([searchItem length] != 0) {
 			//fprintf(stderr, "%s", [searchItem UTF8String]);
-			char *results = self.fstInterface.getApplyResultsUp([searchItem UTF8String]);
+			char *results = fstInterface.getApplyResultsUp([searchItem UTF8String]);
 			NSString *nsresults = [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
 			
 			// Split by lines
@@ -167,11 +225,14 @@
 				if ([result length] != 0) {
 					// Add a new ones
 					Phrase *phrase = [Phrase initWithFSTResult:result];
+					phrase.dictForm = [self convertToHiragana:phrase.dictForm];
 					[self.listContent addObject:phrase];
 				}
 			}
 		}
 	}
+	
+	//fstInterface.destroy();
 }
 #pragma mark -
 #pragma mark Content Filtering

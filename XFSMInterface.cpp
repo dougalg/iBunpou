@@ -44,28 +44,21 @@ bool XFSMInterface::initializeWithFSTName(const char *fst_name) {
 		char *fullFSTDir;
 		fullFSTDir = strcat(path, fst_name);
 		
-		//net = load_net(fullFSTDir, fst_cntxt);
 		net = load_net(fst_name, fst_cntxt);
 		 
 		if (!net || net == NULL) {
 			fprintf(stderr, "Cannot load net at '%s'.\n", fullFSTDir);
 			return false;
 		} else {
-			/*applyer = init_apply(net, UPPER, fst_cntxt);
-			if (applyer == NULL) {
-				fprintf(stderr, "Cannot load applyer.");
-				return false;
-			} else {
-				return true;
-			}*/
 			return true;
 		}
 	}
 }
 
 void XFSMInterface::destroy() {
-	free_applyer_complete(applyer);
-	reclaim_cfsm();
+	//free_applyer_complete(applyer);
+	//free_network(net);
+	//reclaim_cfsm(fst_cntxt);
 }
 
 // This will return a character string of unfiltered results
@@ -78,7 +71,7 @@ char *XFSMInterface::getApplyResultsUp(const char *searchString) {
 	
 	if (applyer == NULL) {
 		// Throw error
-		fprintf(stderr, "Applyer could not be load.\n");
+		fprintf(stderr, "Applyer could not be loaded.\n");
 	} else {
 		result = apply_to_string(searchString, applyer);
 	}
@@ -95,7 +88,7 @@ char *XFSMInterface::getApplyResultsDown(const char *searchString) {
 	
 	if (applyer == NULL) {
 		// Throw error
-		fprintf(stderr, "Applyer could not be load.\n");
+		fprintf(stderr, "Applyer could not be loaded.\n");
 	} else {
 		result = apply_to_string(searchString, applyer);
 	}
