@@ -8,10 +8,9 @@
 
 #import "Phrase.h"
 
-
 @implementation Phrase
 
-@synthesize dictForm, pos, affixes;
+@synthesize dictForm, pos, dispPos, affixes;
 
 + (id)initWithFSTResult:(NSString *)df
 {
@@ -20,6 +19,7 @@
 	NSArray *bits = [df componentsSeparatedByString:@"&"];
 	
 	newPhrase.pos = [bits objectAtIndex:0];
+	newPhrase.dispPos = [self getDispPos:newPhrase.pos];
 	
 	NSArray *bits2 = [[bits objectAtIndex:1] componentsSeparatedByString:@"+"];
 	newPhrase.dictForm = [bits2 objectAtIndex:0];
@@ -33,10 +33,18 @@
 	return newPhrase;
 }
 
+// This function fetched the human readable Display Part of Speech
++ (NSString*)getDispPos:(NSString *)basePos
+{
+	NSString *lDispPos = [[NSString alloc] init];
+	return lDispPos;
+}
+
 - (void)dealloc
 {
 	[dictForm release];
 	[pos release];
+	[dispPos release];
 	[affixes release];
 	[super dealloc];
 }
