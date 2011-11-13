@@ -16,7 +16,15 @@
 		539168B00DCFA64400D8C6CB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539168AE0DCFA64400D8C6CB /* MainWindow.xib */; };
 		53A66D3F0E0842EF009C8489 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A66D3E0E0842EF009C8489 /* CoreGraphics.framework */; };
 		F456B7631117CC6500D94B8F /* Phrase.mm in Sources */ = {isa = PBXBuildFile; fileRef = F456B7611117CC6500D94B8F /* Phrase.mm */; };
+		F457BFC714691A580024BDA4 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F457BFC114691A580024BDA4 /* CJSONDeserializer.m */; };
+		F457BFC814691A580024BDA4 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = F457BFC314691A580024BDA4 /* CJSONScanner.m */; };
+		F457BFC914691A580024BDA4 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F457BFC514691A580024BDA4 /* CJSONSerializer.m */; };
+		F457BFCE14691A7C0024BDA4 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = F457BFCD14691A7C0024BDA4 /* CDataScanner.m */; };
+		F457BFDE14691A960024BDA4 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F457BFDB14691A960024BDA4 /* CDataScanner_Extensions.m */; };
+		F457BFDF14691A960024BDA4 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F457BFDD14691A960024BDA4 /* NSDictionary_JSONExtensions.m */; };
+		F457BFF014691F7E0024BDA4 /* affixes.json in Resources */ = {isa = PBXBuildFile; fileRef = F457BFEF14691F7E0024BDA4 /* affixes.json */; };
 		F4640FBD1288E3FE00DE4459 /* rk_converter.fst in Resources */ = {isa = PBXBuildFile; fileRef = F4640FBC1288E3FE00DE4459 /* rk_converter.fst */; };
+		F4924EC414658B0700E318C0 /* Affix.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4924EC314658B0700E318C0 /* Affix.mm */; };
 		F4A761A211991EF700DCBB7E /* full.fst in Resources */ = {isa = PBXBuildFile; fileRef = F4A761A111991EF700DCBB7E /* full.fst */; };
 		F4EBB1B6111A8F8300AB5208 /* XFSMInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4EBB1B5111A8F8300AB5208 /* XFSMInterface.cpp */; };
 		F4EBB1E4111A95BE00AB5208 /* libxcfsm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EBB1E2111A95BE00AB5208 /* libxcfsm.dylib */; };
@@ -43,8 +51,24 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F456B7601117CC6500D94B8F /* Phrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phrase.h; sourceTree = "<group>"; };
 		F456B7611117CC6500D94B8F /* Phrase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Phrase.mm; sourceTree = "<group>"; };
+		F457BFC014691A580024BDA4 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		F457BFC114691A580024BDA4 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		F457BFC214691A580024BDA4 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		F457BFC314691A580024BDA4 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		F457BFC414691A580024BDA4 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		F457BFC514691A580024BDA4 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		F457BFC614691A580024BDA4 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		F457BFCC14691A7C0024BDA4 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		F457BFCD14691A7C0024BDA4 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		F457BFDA14691A960024BDA4 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		F457BFDB14691A960024BDA4 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		F457BFDC14691A960024BDA4 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		F457BFDD14691A960024BDA4 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		F457BFEF14691F7E0024BDA4 /* affixes.json */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = affixes.json; sourceTree = "<group>"; };
 		F4640FBC1288E3FE00DE4459 /* rk_converter.fst */ = {isa = PBXFileReference; lastKnownFileType = file; path = rk_converter.fst; sourceTree = "<group>"; };
 		F4684C4811D0961D00B4C899 /* xfsm_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xfsm_api.h; sourceTree = "<group>"; };
+		F4924EC214658B0700E318C0 /* Affix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Affix.h; sourceTree = "<group>"; };
+		F4924EC314658B0700E318C0 /* Affix.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Affix.mm; sourceTree = "<group>"; };
 		F4A761A111991EF700DCBB7E /* full.fst */ = {isa = PBXFileReference; lastKnownFileType = file; path = full.fst; sourceTree = "<group>"; };
 		F4EBB1B4111A8F8300AB5208 /* XFSMInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSMInterface.h; sourceTree = "<group>"; };
 		F4EBB1B5111A8F8300AB5208 /* XFSMInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XFSMInterface.cpp; sourceTree = "<group>"; };
@@ -94,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				53FEEEAE0DCFAC0A004B8231 /* ReadMe.txt */,
+				F457BFBF14691A580024BDA4 /* JSON */,
 				29B97315FDCFA39411CA2CEA /* Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -108,6 +133,8 @@
 				F4684C4811D0961D00B4C899 /* xfsm_api.h */,
 				531F16910D63677B003D33FB /* Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.mm */,
+				F4924EC214658B0700E318C0 /* Affix.h */,
+				F4924EC314658B0700E318C0 /* Affix.mm */,
 				F456B7601117CC6500D94B8F /* Phrase.h */,
 				F456B7611117CC6500D94B8F /* Phrase.mm */,
 				531F16A40D6367A3003D33FB /* AppDelegate.h */,
@@ -125,6 +152,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F457BFEF14691F7E0024BDA4 /* affixes.json */,
 				F4640FBC1288E3FE00DE4459 /* rk_converter.fst */,
 				F4A761A111991EF700DCBB7E /* full.fst */,
 				F4FDE8F71137B6BB00ABCDD3 /* kr_converter.fst */,
@@ -144,6 +172,34 @@
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F457BFBF14691A580024BDA4 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F457BFD914691A960024BDA4 /* Extensions */,
+				F457BFCC14691A7C0024BDA4 /* CDataScanner.h */,
+				F457BFCD14691A7C0024BDA4 /* CDataScanner.m */,
+				F457BFC014691A580024BDA4 /* CJSONDeserializer.h */,
+				F457BFC114691A580024BDA4 /* CJSONDeserializer.m */,
+				F457BFC214691A580024BDA4 /* CJSONScanner.h */,
+				F457BFC314691A580024BDA4 /* CJSONScanner.m */,
+				F457BFC414691A580024BDA4 /* CJSONSerializer.h */,
+				F457BFC514691A580024BDA4 /* CJSONSerializer.m */,
+				F457BFC614691A580024BDA4 /* JSONRepresentation.h */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		F457BFD914691A960024BDA4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F457BFDA14691A960024BDA4 /* CDataScanner_Extensions.h */,
+				F457BFDB14691A960024BDA4 /* CDataScanner_Extensions.m */,
+				F457BFDC14691A960024BDA4 /* NSDictionary_JSONExtensions.h */,
+				F457BFDD14691A960024BDA4 /* NSDictionary_JSONExtensions.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +258,7 @@
 				F4A761A211991EF700DCBB7E /* full.fst in Resources */,
 				F4EFB70911A4F805004F0A41 /* PhraseViewController.xib in Resources */,
 				F4640FBD1288E3FE00DE4459 /* rk_converter.fst in Resources */,
+				F457BFF014691F7E0024BDA4 /* affixes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +275,13 @@
 				F456B7631117CC6500D94B8F /* Phrase.mm in Sources */,
 				F4EBB1B6111A8F8300AB5208 /* XFSMInterface.cpp in Sources */,
 				F4EFB6FF11A4E821004F0A41 /* PhraseViewController.mm in Sources */,
+				F4924EC414658B0700E318C0 /* Affix.mm in Sources */,
+				F457BFC714691A580024BDA4 /* CJSONDeserializer.m in Sources */,
+				F457BFC814691A580024BDA4 /* CJSONScanner.m in Sources */,
+				F457BFC914691A580024BDA4 /* CJSONSerializer.m in Sources */,
+				F457BFCE14691A7C0024BDA4 /* CDataScanner.m in Sources */,
+				F457BFDE14691A960024BDA4 /* CDataScanner_Extensions.m in Sources */,
+				F457BFDF14691A960024BDA4 /* NSDictionary_JSONExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +323,8 @@
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"/Users/dgraham/Desktop/xfsm_api/macosx/lib\"",
 					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lbreadline",
@@ -289,6 +353,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Desktop/xfsm_api/macosx/lib\"",
 					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)\"",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = TableSearch;
@@ -304,10 +369,13 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = iBunpou;
 				SDKROOT = iphoneos4.1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -318,8 +386,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				SDKROOT = iphoneos2.0;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

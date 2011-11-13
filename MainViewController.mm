@@ -11,7 +11,7 @@
 
 @implementation MainViewController
 
-@synthesize listContent, savedListContent, savedSearchTerm, searchWasActive, phraseView;
+@synthesize listContent, savedListContent, savedSearchTerm, searchWasActive, phraseView, allAffixes;
 
 
 #pragma mark - 
@@ -20,13 +20,12 @@
 - (void)viewDidLoad
 {
 	self.title = @"Search";
-	
-	
+
 	// restore search settings if they were saved in didReceiveMemoryWarning.
     if (self.savedSearchTerm)
 	{
         [self.searchDisplayController setActive:self.searchWasActive];
-        [self.searchDisplayController.searchBar setText:savedSearchTerm];
+        self.searchDisplayController.searchBar.text = savedSearchTerm;
 		self.listContent = self.savedListContent;
         
 		self.savedListContent = nil;
@@ -119,9 +118,9 @@
 	self.phraseView.phrase = phrase;
 	[self.phraseView.affixes removeAllObjects];
 	self.phraseView.affixes = [phrase.affixes mutableCopy];
-	[self.phraseView.dictForm setText:phrase.dictForm];
-	[self.phraseView.enteredForm setText:self.savedSearchTerm];
-	[self.phraseView.pos setText:phrase.pos];
+	self.phraseView.dictForm.text = phrase.dictForm;
+	self.phraseView.enteredForm.text = self.savedSearchTerm;
+	self.phraseView.dispPos.text = phrase.dispPos;
 	
 }
 
@@ -130,7 +129,7 @@
 - (NSString*)formatSearchString:(NSString*)stringToFormat
 {
 	XFSMInterface hiraganaFstInterface;
-	char *path = "kr_converter.fst";
+	const char *path = "kr_converter.fst";
 	// Reformat the path while passing it to the func
 	bool success = hiraganaFstInterface.initializeWithFSTName(path);
 	if (success) {
@@ -159,7 +158,7 @@
 - (NSString*)convertToHiragana:(NSString*)stringToFormat
 {
 	XFSMInterface hiraganaFstInterface;
-	char *path = "rk_converter.fst";
+	const char *path = "rk_converter.fst";
 	// Reformat the path while passing it to the func
 	bool success = hiraganaFstInterface.initializeWithFSTName(path);
 	if (success) {
@@ -198,7 +197,7 @@
 	
 	// Set up the FST interfacer
 	// First, set the path to the FST
-	char *path = "full.fst";
+	const char *path = "full.fst";
 	XFSMInterface fstInterface;
 	
 	// Reformat the path while passing it to the func
@@ -224,15 +223,13 @@
 			for (NSString *result in resultsArray) {
 				if ([result length] != 0) {
 					// Add a new ones
-					Phrase *phrase = [Phrase initWithFSTResult:result];
+					Phrase *phrase = [Phrase initWithFSTResult:result andAffixArray:allAffixes];
 					phrase.dictForm = [self convertToHiragana:phrase.dictForm];
 					[self.listContent addObject:phrase];
 				}
 			}
 		}
 	}
-	
-	//fstInterface.destroy();
 }
 #pragma mark -
 #pragma mark Content Filtering

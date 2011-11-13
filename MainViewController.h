@@ -18,6 +18,8 @@
     NSString		*savedSearchTerm;
     BOOL			searchWasActive;
 	
+	NSArray	*allAffixes;
+	
 	PhraseViewController	*phraseView;
 }
 
@@ -28,5 +30,6 @@
 @property (nonatomic) BOOL searchWasActive;
 
 @property (nonatomic,retain) PhraseViewController *phraseView;
+@property (nonatomic,retain) NSArray *allAffixes;
 
 @end

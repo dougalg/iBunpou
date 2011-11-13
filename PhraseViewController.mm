@@ -10,7 +10,7 @@
 
 
 @implementation PhraseViewController
-@synthesize	phrase,pos,affixes,dictForm,enteredForm;
+@synthesize	phrase,dispPos,affixes,dictForm,enteredForm;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -24,12 +24,34 @@
 	static NSString *cellId = @"identifier";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellId];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:cellId] autorelease];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
 	}
-	[cell setText:[self.affixes objectAtIndex:indexPath.row]];
+	Affix *curAffix = [self.affixes objectAtIndex:indexPath.row];
+	NSLog(@"%@", curAffix.fstCode);
+	
+	// Format the sForms to go in the textLabel slot
+	NSMutableString *tempString = [[[NSMutableString alloc] init] autorelease];
+	for (id sForm in curAffix.sForms) {
+		[tempString appendString:sForm];
+		[tempString appendString:@"\n"];
+	}
+	
+	cell.textLabel.text = tempString;
+	cell.detailTextLabel.text = curAffix.hFormShort;
+	
+	// Set color and font size for the affix labels
+	cell.textLabel.textColor = cell.detailTextLabel.textColor;
+	cell.textLabel.numberOfLines = 0;
+	cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+	cell.detailTextLabel.font = [UIFont systemFontOfSize:17];
+	cell.textLabel.font = [UIFont systemFontOfSize:17];
+	
 	return cell;
 }
-	 
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return @"Suffixes";
+}	 
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -52,7 +74,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
-*/
+ */
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.

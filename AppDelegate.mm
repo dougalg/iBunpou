@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "Phrase.h"
+#import "CJSONDeserializer.h"
+#import "XFSMInterface.h"
 
 @implementation AppDelegate;
 
@@ -33,6 +35,18 @@
 	MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
 	mainViewController.listContent = listContent;
 	[listContent release];
+	
+	// Try out JSON parsing
+	// Load the data file
+	NSString *path = [[NSBundle mainBundle] pathForResource: @"affixes" ofType: @"json"];
+	NSData *data = [NSData dataWithContentsOfFile: path];
+	
+	// Parse it with the JSON parser
+	NSError *theError = nil;
+	NSArray *array = [[CJSONDeserializer deserializer] deserializeAsArray:data error:&theError];
+	NSLog(@"@%", array);
+	// Set the affixes for the mainView
+	mainViewController.allAffixes = array;
 	
 	// Add create and configure the navigation controller.
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];

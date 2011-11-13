@@ -6,6 +6,9 @@
 //  Copyright 2009 JET. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import "Affix.h"
+
 @interface Phrase : NSObject {
 	NSString *dictForm;		// The dictionary form of the word
 	NSString *pos;			// The part of speech for the word encoded from the FST, eg. V, N, Adj-i, etc...
@@ -18,6 +21,11 @@
 @property (nonatomic, copy) NSString *dispPos;
 @property (nonatomic, copy) NSArray *affixes;
 
-+ (id)initWithFSTResult:(NSString *)df;
++ (id)initWithFSTResult:(NSString *)df
+	andAffixArray:(NSArray *)allAffixes;
++ (NSString*)getDispPos:(NSString *)basePos;
++ (NSArray*)getAffixObjects:(NSArray *) affixTextArray
+			 usingAffixArray:(NSArray *) allAffixes
+			 andPOS:(NSString *) POS;
 
 @end

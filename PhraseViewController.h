@@ -8,17 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "Phrase.h"
-
+#import "Affix.h"
 
 @interface PhraseViewController : UIViewController {
-	IBOutlet UILabel		*pos;
+	IBOutlet UILabel		*dispPos;
 	NSMutableArray			*affixes;
 	IBOutlet UILabel		*enteredForm;
 	IBOutlet UILabel		*dictForm;
 	Phrase					*phrase;
+	NSArray					*allAffixes;
 }
 
-@property(nonatomic, retain) IBOutlet UILabel		*pos;
+@property(nonatomic, retain) IBOutlet UILabel		*dispPos;
 @property(nonatomic, retain) IBOutlet UILabel		*enteredForm;
 @property(nonatomic, retain) IBOutlet UILabel		*dictForm;
 @property(nonatomic, retain) NSMutableArray			*affixes;
