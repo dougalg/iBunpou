@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8">
+<affixes>
+    <affix category="adj-t">
+        <fstCode>taru</fstCode>
+        <sForms>
+            <sForm>+たる</sForm>
+        </sForms>
+        <hFormShort></hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-t">
+        <fstCode>to</fstCode>
+        <sForms>
+            <sForm>+と</sForm>
+        </sForms>
+        <hFormShort></hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>NEG</fstCode>
+        <sForms>
+            <sForm></sForm>
+        </sForms>
+        <hFormShort></hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>DE</fstCode>
+        <sForms>
+            <sForm>+i+de</sForm>
+        </sForms>
+        <hFormShort></hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>SOU</fstCode>
+        <sForms>
+            <sForm>+そう</sForm>
+        </sForms>
+        <hFormShort></hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>GSTEM</fstCode>
+        <sForms>
+            <sForm></sForm>
+        </sForms>
+        <hFormShort></hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>VOL</fstCode>
+        <sForms>
+            <sForm>+かろう</sForm>
+        </sForms>
+        <hFormShort>Volitional</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>ADV</fstCode>
+        <sForms>
+            <sForm>+く</sForm>
+        </sForms>
+        <hFormShort>Adverb</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>SUGIRU</fstCode>
+        <sForms>
+            <sForm>+過ぎ</sForm>
+        </sForms>
+        <hFormShort>too X</hFormShort>
+        <hFormLong>Sugiru is conjugated as an ichidan verb</hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>DEG</fstCode>
+        <sForms>
+            <sForm>+さ</sForm>
+        </sForms>
+        <hFormShort>Degree</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>NARU</fstCode>
+        <sForms>
+            <sForm>+なる</sForm>
+        </sForms>
+        <hFormShort>Become</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>TE</fstCode>
+        <sForms>
+            <sForm>+て</sForm>
+        </sForms>
+        <hFormShort>て form</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>NEG&amp;POLITE</fstCode>
+        <sForms>
+            <sForm>+ありません</sForm>
+        </sForms>
+        <hFormShort>Polite negative</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>NEG&amp;POLITE&amp;PAST</fstCode>
+        <sForms>
+            <sForm>+ありませんでした</sForm>
+        </sForms>
+        <hFormShort>Polite past negative</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>NEG&amp;PLAIN</fstCode>
+        <sForms>
+            <sForm>+な</sForm>
+            <sForm>+は な</sForm>
+        </sForms>
+        <hFormShort>Plain negative</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>NPAST</fstCode>
+        <sForms>
+            <sForm>+い</sForm>
+        </sForms>
+        <hFormShort>Non-past</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>PAST</fstCode>
+        <sForms>
+            <sForm>+かった</sForm>
+        </sForms>
+        <hFormShort>Past</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+    <affix category="adj-i">
+        <fstCode>COND</fstCode>
+        <sForms>
+            <sForm>+ければ</sForm>
+        </sForms>
+        <hFormShort>Conditional</hFormShort>
+        <hFormLong></hFormLong>
+    </affix>
+</affixes>
