@@ -11,7 +11,7 @@
 
 @implementation MainViewController
 
-@synthesize listContent, savedListContent, savedSearchTerm, searchWasActive, phraseView, allAffixes, fstInterface, hiraganaFstInterface, romajiFstInterface;
+@synthesize listContent, savedListContent, savedSearchTerm, searchWasActive, phraseView, allAffixes, fstInterface, uncleanFstInterface, hiraganaFstInterface, romajiFstInterface;
 
 
 #pragma mark - 
@@ -115,6 +115,18 @@
 	[self.navigationController pushViewController:self.phraseView animated:YES];
 	[viewController release];
 	
+	NSArray *uncleanResults = [self.uncleanFstInterface getApplyResultsDown:phrase.fstResult];
+	NSMutableArray *hiraganaUncleanResults = [[[NSMutableArray alloc] init] autorelease];
+	for (id result in uncleanResults) {
+		NSArray *newResult = [self.hiraganaFstInterface getApplyResultsDown:result];
+		if ([newResult count] > 0) {
+			[hiraganaUncleanResults addObject:[newResult objectAtIndex:0]];
+		} else {
+			[hiraganaUncleanResults addObject:result];
+		}
+	}
+	[phrase setAffixesWithUncleanResults:hiraganaUncleanResults usingAffixArray:allAffixes];
+	
 	self.phraseView.phrase = phrase;
 	[self.phraseView.affixes removeAllObjects];
 	self.phraseView.affixes = [phrase.affixes mutableCopy];
@@ -128,11 +140,11 @@
 #pragma mark Format Search String
 - (NSString*)formatSearchString:(NSString*)stringToFormat
 {
-	NSString *results = [self.romajiFstInterface getApplyResultsDown:stringToFormat];
-	if ([results length] == 0 || [results isEqualToString:@"\n"]) {
+	NSArray *results = [self.romajiFstInterface getApplyResultsDown:stringToFormat];
+	if ([results count] <= 0 && ([[results objectAtIndex:0] length] == 0 || [[results objectAtIndex:0] isEqualToString:@"\n"])) {
 		return stringToFormat;
 	} else {
-		return results;
+		return [results objectAtIndex:0];
 	}
 }
 
@@ -140,12 +152,11 @@
 #pragma mark Format Search String
 - (NSString*)convertToHiragana:(NSString*)stringToFormat
 {
-	NSString *results = [self.hiraganaFstInterface getApplyResultsDown:stringToFormat];
-	NSLog(@"%@", results);
-	if ([results length] == 0 || [results isEqualToString:@"\n"]) {
+	NSArray *results = [self.hiraganaFstInterface getApplyResultsDown:stringToFormat];
+	if ([results count] <= 0 && ([[results objectAtIndex:0] length] == 0 || [[results objectAtIndex:0] isEqualToString:@"\n"])) {
 		return stringToFormat;
 	} else {
-		return results;
+		return [results objectAtIndex:0];
 	}
 }
 
@@ -165,20 +176,16 @@
 	// Loop
 	for (NSString *searchItem in searchTextArray) {
 		if ([searchItem length] != 0) {
-			//fprintf(stderr, "%s", [searchItem UTF8String]);
-			NSString *results = [self.fstInterface getApplyResultsUp:searchItem];
-			//NSString *nsresults = [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
-			
-			// Split by lines
-			NSArray *resultsArray = [results componentsSeparatedByString:@"\n"];
-			
-			// Loop
-			for (NSString *result in resultsArray) {
-				if ([result length] != 0) {
-					// Add a new ones
-					Phrase *phrase = [Phrase initWithFSTResult:result andAffixArray:allAffixes];
-					phrase.dictForm = [self convertToHiragana:phrase.dictForm];
-					[self.listContent addObject:phrase];
+			NSArray *results = [self.fstInterface getApplyResultsUp:searchItem];
+			if ([results count] > 0) {
+				// Loop
+				for (NSString *result in results) {
+					if ([result length] != 0) {
+						// Add a new ones
+						Phrase *phrase = [Phrase initWithFSTResult:result];
+						phrase.dictForm = [self convertToHiragana:phrase.dictForm];
+						[self.listContent addObject:phrase];
+					}
 				}
 			}
 		}

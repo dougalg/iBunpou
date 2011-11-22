@@ -23,6 +23,7 @@
 	PhraseViewController	*phraseView;
 	
 	XFSM_Wrap		*fstInterface;			// The main fst interface
+	XFSM_Wrap		*uncleanFstInterface;
 	XFSM_Wrap		*romajiFstInterface;	// Converts hiragana to romaji
 	XFSM_Wrap		*hiraganaFstInterface;	// vice-versa
 }
@@ -37,6 +38,7 @@
 @property (nonatomic,retain) NSArray *allAffixes;
 
 @property (nonatomic,retain) XFSM_Wrap *fstInterface;
+@property (nonatomic,retain) XFSM_Wrap *uncleanFstInterface;
 @property (nonatomic,retain) XFSM_Wrap *romajiFstInterface;
 @property (nonatomic,retain) XFSM_Wrap *hiraganaFstInterface;
 

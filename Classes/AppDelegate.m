@@ -45,6 +45,7 @@
 	
 	mainViewController.romajiFstInterface = krFST;
 	mainViewController.hiraganaFstInterface = rkFST;
+	mainViewController.uncleanFstInterface = uncleanFST;
 	mainViewController.fstInterface = fullFST;
 	
 	// Try out JSON parsing
@@ -55,7 +56,7 @@
 	// Parse it with the JSON parser
 	NSError *theError = nil;
 	NSArray *array = [[CJSONDeserializer deserializer] deserializeAsArray:data error:&theError];
-	NSLog(@"@%", array);
+	
 	// Set the affixes for the mainView
 	mainViewController.allAffixes = array;
 	

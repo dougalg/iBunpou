@@ -65,6 +65,7 @@ char *XFSMInterface::getApplyResultsUp(const char *searchString) {
 	} else {
 		result = apply_to_string(searchString, applyer);
 	}
+	//fprintf(stderr, "(U) Input: '%s' Result: '%s'\n", searchString, result);
 	return result;
 }
 
@@ -82,6 +83,7 @@ char *XFSMInterface::getApplyResultsDown(const char *searchString) {
 	} else {
 		result = apply_to_string(searchString, applyer);
 	}
+	//fprintf(stderr, "(U) Input: '%s' Result: '%s'\n", searchString, result);
 	return result;
 }
 }

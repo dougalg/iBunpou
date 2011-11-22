@@ -27,7 +27,6 @@
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
 	}
 	Affix *curAffix = [self.affixes objectAtIndex:indexPath.row];
-	NSLog(@"%@", curAffix.fstCode);
 	
 	// Format the sForms to go in the textLabel slot
 	NSMutableString *tempString = [[[NSMutableString alloc] init] autorelease];

@@ -36,26 +36,34 @@ public:
 	return self;
 }
 
-- (NSString*)getApplyResultsUp:(NSString *)queryStr {
+- (NSArray*)getApplyResultsUp:(NSString *)queryStr {
 	// Pass temp char to self.cpp
 	char *results = self.cpp->interface.getApplyResultsUp([queryStr UTF8String]);
-	// Convert result to NSString
+	// Convert result to NSArray
 	if (results) {
-		return [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
+		NSString *resultsStr = [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
+		NSString *resultsStr2 = [resultsStr stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+		NSArray *resultsArray = [resultsStr2 componentsSeparatedByString:@"\n"];
+		return resultsArray;
 	}
-	// Return nsresults
-	return queryStr;
+	// Return queryStr if result
+	NSArray *oops = [[[NSArray alloc] initWithObjects:queryStr,nil] autorelease];
+	return oops;
 }
 
-- (NSString*)getApplyResultsDown:(NSString *)queryStr {
+- (NSArray*)getApplyResultsDown:(NSString *)queryStr {
 	// Pass temp char to self.cpp
 	char *results = self.cpp->interface.getApplyResultsDown([queryStr UTF8String]);
-	// Convert result to NSString
+	// Convert result to NSArray
 	if (results) {
-		return [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
+		NSString *resultsStr = [NSString stringWithCString:results encoding:NSUTF8StringEncoding];
+		NSString *resultsStr2 = [resultsStr stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+		NSArray *resultsArray = [resultsStr2 componentsSeparatedByString:@"\n"];
+		return resultsArray;
 	}
-	// Return nsresults
-	return queryStr;
+	// Return queryStr if result
+	NSArray *oops = [[[NSArray alloc] initWithObjects:queryStr,nil] autorelease];
+	return oops;
 }
 
 @end

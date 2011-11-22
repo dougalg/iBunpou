@@ -1,3 +1,0 @@
-/Users/dgraham/Documents/workspace/iBunpou/Classes/AppDelegate.m: In function '-[AppDelegate applicationDidFinishLaunching:]':
-/Users/dgraham/Documents/workspace/iBunpou/Classes/AppDelegate.m:34: warning: unused variable 'uncleanFST'
-/Users/dgraham/Documents/workspace/iBunpou/Classes/AppDelegate.m:33: warning: unused variable 'fullFST'

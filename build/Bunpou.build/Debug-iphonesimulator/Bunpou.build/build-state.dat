@@ -1,842 +1,0 @@
-TBunpou
-v7
-r0
-t296452414.177792
-cCheck dependencies
-cProcessInfoPlistFile /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/Info.plist Info.plist
-cCompileXIB /Users/dgraham/Documents/workspace/iBunpou/en.lproj/MainWindow.xib
-cCompileXIB /Users/dgraham/Documents/workspace/iBunpou/en.lproj/MainView.xib
-cCpResource build/Debug-iphonesimulator/TableSearch.app/kr_converter.fst kr_converter.fst
-cCpResource build/Debug-iphonesimulator/TableSearch.app/full.fst full.fst
-cCompileXIB /Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.xib
-cProcessPCH++ /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch.gch Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cProcessPCH++ /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-hhdjrqeudjiuzbajimsqisamoiqc/Prefix.pch.gch Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
-cCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o /Users/dgraham/Documents/workspace/iBunpou/main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o /Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o /Users/dgraham/Documents/workspace/iBunpou/MainViewController.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o /Users/dgraham/Documents/workspace/iBunpou/Phrase.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o /Users/dgraham/Documents/workspace/iBunpou/XFSMInterface.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-cCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o /Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cLd /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch normal i386
-cGenerateDSYMFile /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app.dSYM /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-cTouch /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk
-c000000004ABE051D00000000000000EE
-t1253967133
-s238
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
-c000000004A0BA8C00000000000000A99
-t1242278080
-s2713
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004A0BAA26000000000026DB00
-t1242278438
-s2546432
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004A0BAB370000000000260C20
-t1242278711
-s2493472
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004A0BAB250000000000001355
-t1242278693
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004A0CBEBB000000000000075E
-t1242349243
-s1886
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004A0CBF5F0000000001432D80
-t1242349407
-s21179776
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/stdio.h
-c000000004748A1330000000000003D1D
-t1195942195
-s15645
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/stdlib.h
-c000000004748A1330000000000002A79
-t1195942195
-s10873
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/string.h
-c000000004748A1330000000000001731
-t1195942195
-s5937
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/include/wchar.h
-c000000004748A13300000000000025DA
-t1195942195
-s9690
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
-c000000004748AF950000000000003197
-t1195945877
-s12695
-
-N/Users/dgraham/Desktop/xfsm_api/macosx/lib/libbreadline.dylib
-c000000004B5D3E4C000000000000708C
-t1264401996
-s28812
-
-N/Users/dgraham/Desktop/xfsm_api/macosx/lib/libxcfsm.dylib
-c000000004B5D3E4C00000000000F00C0
-t1264401996
-s983232
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.h
-c000000004A306F390000000000000ACC
-t1244688185
-s2764
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm
-c000000004B8272E900000000000010A1
-t1266840297
-s4257
-i"AppDelegate.h"
-i"MainViewController.h"
-i"Phrase.h"
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/MainViewController.h
-c000000004BF4C8F20000000000000DB9
-t1274333426
-s3513
-i"XFSMInterface.h"
-i"PhraseViewController.h"
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/MainViewController.mm
-c000000004BF5282C00000000000027D1
-t1274357804
-s10193
-i"MainViewController.h"
-i"Phrase.h"
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/Phrase.h
-c000000004BF4E21F000000000000018B
-t1274339871
-s395
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/Phrase.mm
-c000000004BF4E227000000000000033C
-t1274339879
-s828
-i"Phrase.h"
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.h
-c000000004BF5101F0000000000000290
-t1274351647
-s656
-i<UIKit/UIKit.h>
-i"Phrase.h"
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm
-c000000004BF526E40000000000000898
-t1274357476
-s2200
-i"PhraseViewController.h"
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.xib
-c000000004BF4E3310000000000003DD1
-t1274340145
-s15825
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/Prefix.pch
-c0000000049FA561B0000000000000058
-t1241142811
-s88
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/XFSMInterface.cpp
-c000000004B8B5FDB00000000000009D4
-t1267425243
-s2516
-i<stddef.h>
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i"CoreFoundation/CoreFoundation.h"
-i"XFSMInterface.h"
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/XFSMInterface.h
-c000000004B8B5F8500000000000001B5
-t1267425157
-s437
-i<string>
-i"xfsm_api.h"
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o
-t1274351649
-s64748
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o
-t1274357807
-s79048
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o
-t1274340157
-s12200
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o
-t1274357528
-s38224
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/TableSearch.LinkFileList
-c000000004BF4BE69000000000000031E
-t1274330729
-s798
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o
-t1267425251
-s30196
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o
-t1265262571
-s6552
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app
-t1274357807
-s408
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app.dSYM
-t1274357807
-s102
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/Info.plist
-t1265262587
-s573
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/PhraseViewController.nib
-t1274340157
-s3295
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/PkgInfo
-t1265262587
-s8
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-t1274357807
-s41584
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/en.lproj/MainView.nib
-t1265262588
-s2119
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/en.lproj/MainWindow.nib
-t1274331426
-s1341
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/full.fst
-t1273554810
-s271937
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/kr_converter.fst
-t1267171132
-s1908
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/rk_converter.fst
-t1266676123
-s2729
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainView.xib
-c000000004B61383A0000000000002AD1
-t1264662586
-s10961
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainWindow.xib
-c000000004BF4BFB60000000000002160
-t1274331062
-s8544
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/full.fst
-c000000004BCD1C290000000000042641
-t1271733289
-s271937
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/kr_converter.fst
-c000000004B87551F0000000000000774
-t1267160351
-s1908
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/lib/English.lproj/libbreadline.dylib
-c000000004B5D3E4C000000000000708C
-t1264401996
-s28812
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/lib/libbreadline.dylib
-c000000004B5D3E4C000000000000708C
-t1264401996
-s28812
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/lib/libxcfsm.dylib
-c000000004B5D3E4C00000000000F00C0
-t1264401996
-s983232
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/main.mm
-c000000004A306F390000000000000A79
-t1244688185
-s2681
-i<UIKit/UIKit.h>
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/rk_converter.fst
-c000000004ADD00480000000000000AA9
-t1255997512
-s2729
-
-N/Users/dgraham/Documents/workspace/Bunpou/2/xfsm_api.h
-c000000004B8A468C000000000001A706
-t1267353228
-s108294
-i<stdio.h>
-
-N/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.h
-c000000004BF5FAEA0000000000000180
-t1274411754
-s384
-
-N/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm
-c000000004BF5FAE50000000000000754
-t1274411749
-s1876
-i"AppDelegate.h"
-i"MainViewController.h"
-i"Phrase.h"
-
-N/Users/dgraham/Documents/workspace/iBunpou/MainViewController.h
-c000000004BF5FAEF000000000000047D
-t1274411759
-s1149
-i"XFSMInterface.h"
-i"PhraseViewController.h"
-
-N/Users/dgraham/Documents/workspace/iBunpou/MainViewController.mm
-c000000004BF5FAF30000000000001B82
-t1274411763
-s7042
-i"MainViewController.h"
-i"Phrase.h"
-
-N/Users/dgraham/Documents/workspace/iBunpou/Phrase.h
-c000000004BF4E21F000000000000018B
-t1274339871
-s395
-
-N/Users/dgraham/Documents/workspace/iBunpou/Phrase.mm
-c000000004BF4E227000000000000033C
-t1274339879
-s828
-i"Phrase.h"
-
-N/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.h
-c000000004BF5101F0000000000000290
-t1274351647
-s656
-i<UIKit/UIKit.h>
-i"Phrase.h"
-
-N/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm
-c000000004BF526E40000000000000898
-t1274357476
-s2200
-i"PhraseViewController.h"
-
-N/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.xib
-c000000004BF4E3310000000000003DD1
-t1274340145
-s15825
-
-N/Users/dgraham/Documents/workspace/iBunpou/Prefix.pch
-c0000000049FA561B0000000000000058
-t1241142811
-s88
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/dgraham/Documents/workspace/iBunpou/XFSMInterface.cpp
-c000000004B8B5FDB00000000000009D4
-t1267425243
-s2516
-i<stddef.h>
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i"CoreFoundation/CoreFoundation.h"
-i"XFSMInterface.h"
-
-N/Users/dgraham/Documents/workspace/iBunpou/XFSMInterface.h
-c000000004B8B5F8500000000000001B5
-t1267425157
-s437
-i<string>
-i"xfsm_api.h"
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o
-t1274759613
-s64748
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o
-t1274759613
-s78972
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o
-t1274410344
-s12196
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o
-t1274410344
-s38220
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/TableSearch.LinkFileList
-c000000004BF5F5670000000000000318
-t1274410343
-s792
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o
-t1274410345
-s30192
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o
-t1274759612
-s6548
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app
-t1274759614
-s408
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app.dSYM
-t1274759614
-s102
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/Info.plist
-t1265262587
-s573
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/PhraseViewController.nib
-t1274340157
-s3295
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/PkgInfo
-t1265262587
-s8
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-t1274759614
-s41572
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/en.lproj/MainView.nib
-t1265262588
-s2119
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/en.lproj/MainWindow.nib
-t1274331426
-s1341
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/full.fst
-t1273554810
-s271937
-
-N/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/kr_converter.fst
-t1267171132
-s1908
-
-N/Users/dgraham/Documents/workspace/iBunpou/en.lproj/MainView.xib
-c000000004B61383A0000000000002AD1
-t1264662586
-s10961
-
-N/Users/dgraham/Documents/workspace/iBunpou/en.lproj/MainWindow.xib
-c000000004BF4BFB60000000000002160
-t1274331062
-s8544
-
-N/Users/dgraham/Documents/workspace/iBunpou/full.fst
-c000000004BCD1C290000000000042641
-t1271733289
-s271937
-
-N/Users/dgraham/Documents/workspace/iBunpou/kr_converter.fst
-c000000004B87551F0000000000000774
-t1267160351
-s1908
-
-N/Users/dgraham/Documents/workspace/iBunpou/lib/libbreadline.dylib
-c000000004B5D3E4C000000000000708C
-t1264401996
-s28812
-
-N/Users/dgraham/Documents/workspace/iBunpou/lib/libxcfsm.dylib
-c000000004B5D3E4C00000000000F00C0
-t1264401996
-s983232
-
-N/Users/dgraham/Documents/workspace/iBunpou/main.mm
-c000000004BF5F9C000000000000000DF
-t1274411456
-s223
-i<UIKit/UIKit.h>
-
-N/Users/dgraham/Documents/workspace/iBunpou/xfsm_api.h
-c000000004B8A468C000000000001A706
-t1267353228
-s108294
-i<stdio.h>
-
-N/var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch.gch
-t1274410344
-s13899120
-
-N/var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-bhljqqyrzytgmkgfkvskulfgjzvg/Prefix.pch.gch
-t1265260370
-s13899120
-
-N/var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-eajbfidutqchocejmtjqonjwcutz/Prefix.pch.gch
-t1265260370
-s2519408
-
-N/var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-hhdjrqeudjiuzbajimsqisamoiqc/Prefix.pch.gch
-t1274410343
-s2519408
-
-NInfo.plist
-c0000000049FF55D30000000000000351
-t1241470419
-s849
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies296452408#296452409#0(0"0(0#1#0"7947009927035180032#0"0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o /Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296044448.801678
-e296044449.046023
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o
-x/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-o/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm: In function 'void -[AppDelegate applicationDidFinishLaunching:](AppDelegate*, objc_selector*, UIApplication*)':
-o/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm:79: warning: deprecated conversion from string constant to 'char*'
-o/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm:80: warning: deprecated conversion from string constant to 'char*'
-lSLF07#2@66"Compile /Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm296044448#296044449#0(424"/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm: In function 'void -[AppDelegate applicationDidFinishLaunching:](AppDelegate*, objc_selector*, UIApplication*)':/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm:79: warning: deprecated conversion from string constant to 'char*'/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm:80: warning: deprecated conversion from string constant to 'char*'2(22@53"Deprecated conversion from string constant to 'char*'296044449#172#126#0(6@58"/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm288533097#79#0#79#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'296044449#298#126#0(6@58"/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm288533097#80#0#80#0#49"deprecated conversion from string constant to '*'0(0#0#58"/Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm4300885448#1934"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-bhljqqyrzytgmkgfkvskulfgjzvg/Prefix.pch -c /Users/dgraham/Documents/workspace/Bunpou/2/AppDelegate.mm -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o /Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296452410.075184
-e296452413.077146
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o
-x/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-o/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm: In function 'void -[AppDelegate applicationDidFinishLaunching:](AppDelegate*, objc_selector*, UIApplication*)':
-o/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm:39: warning: deprecated conversion from string constant to 'char*'
-o/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm:40: warning: deprecated conversion from string constant to 'char*'
-lSLF07#2@65"Compile /Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm296452410#296452413#0(421"/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm: In function 'void -[AppDelegate applicationDidFinishLaunching:](AppDelegate*, objc_selector*, UIApplication*)':/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm:39: warning: deprecated conversion from string constant to 'char*'/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm:40: warning: deprecated conversion from string constant to 'char*'2(22@53"Deprecated conversion from string constant to 'char*'296452413#171#125#0(6@57"/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm296104549#39#0#39#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'296452413#296#125#0(6@57"/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm296104549#40#0#40#0#49"deprecated conversion from string constant to '*'0(0#0#57"/Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm4300885448#1923"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch -c /Users/dgraham/Documents/workspace/iBunpou/AppDelegate.mm -o /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/AppDelegate.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o /Users/dgraham/Documents/workspace/Bunpou/2/MainViewController.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296050607.423231
-e296050607.853503
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o
-x/Users/dgraham/Documents/workspace/Bunpou/2/MainViewController.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/dgraham/Documents/workspace/Bunpou/2/MainViewController.mm296050607#296050607#0(0"0(0#0#65"/Users/dgraham/Documents/workspace/Bunpou/2/MainViewController.mm4300885448#1948"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-bhljqqyrzytgmkgfkvskulfgjzvg/Prefix.pch -c /Users/dgraham/Documents/workspace/Bunpou/2/MainViewController.mm -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o /Users/dgraham/Documents/workspace/iBunpou/MainViewController.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296452412.054319
-e296452413.130837
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o
-x/Users/dgraham/Documents/workspace/iBunpou/MainViewController.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/dgraham/Documents/workspace/iBunpou/MainViewController.mm296452412#296452413#0(0"0(0#0#64"/Users/dgraham/Documents/workspace/iBunpou/MainViewController.mm4300885448#1937"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch -c /Users/dgraham/Documents/workspace/iBunpou/MainViewController.mm -o /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/MainViewController.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o /Users/dgraham/Documents/workspace/Bunpou/2/Phrase.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296032957.807665
-e296032957.958819
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o
-x/Users/dgraham/Documents/workspace/Bunpou/2/Phrase.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@61"Compile /Users/dgraham/Documents/workspace/Bunpou/2/Phrase.mm296032957#296032958#0(0"0(0#0#53"/Users/dgraham/Documents/workspace/Bunpou/2/Phrase.mm4300885448#1924"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-bhljqqyrzytgmkgfkvskulfgjzvg/Prefix.pch -c /Users/dgraham/Documents/workspace/Bunpou/2/Phrase.mm -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o /Users/dgraham/Documents/workspace/iBunpou/Phrase.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296103144.728156
-e296103144.778013
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o
-x/Users/dgraham/Documents/workspace/iBunpou/Phrase.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@60"Compile /Users/dgraham/Documents/workspace/iBunpou/Phrase.mm296103144#296103144#0(0"0(0#0#52"/Users/dgraham/Documents/workspace/iBunpou/Phrase.mm3414973617650413056#1913"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch -c /Users/dgraham/Documents/workspace/iBunpou/Phrase.mm -o /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/Phrase.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o /Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296050328.173210
-e296050328.332115
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o
-x/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-o/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm: In function 'UITableViewCell* -[PhraseViewController tableView:cellForRowAtIndexPath:](PhraseViewController*, objc_selector*, UITableView*, NSIndexPath*)':
-o/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm:29: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:199)
-lSLF07#2@75"Compile /Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm296050328#296050328#0(501"/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm: In function 'UITableViewCell* -[PhraseViewController tableView:cellForRowAtIndexPath:](PhraseViewController*, objc_selector*, UITableView*, NSIndexPath*)':/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm:29: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:199)1(22@194"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:199)296050328#225#276#0(6@67"/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm296050276#29#0#29#0#33"'*' is deprecated (declared at *)0(0#0#67"/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm4300885448#1952"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-bhljqqyrzytgmkgfkvskulfgjzvg/Prefix.pch -c /Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.mm -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o /Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296103144.879573
-e296103144.943936
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o
-x/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-o/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm: In function 'UITableViewCell* -[PhraseViewController tableView:cellForRowAtIndexPath:](PhraseViewController*, objc_selector*, UITableView*, NSIndexPath*)':
-o/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm:29: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:199)
-lSLF07#2@74"Compile /Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm296103144#296103144#0(499"/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm: In function 'UITableViewCell* -[PhraseViewController tableView:cellForRowAtIndexPath:](PhraseViewController*, objc_selector*, UITableView*, NSIndexPath*)':/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm:29: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:199)1(22@194"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:199)296103144#224#275#0(6@66"/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm296050276#29#0#29#0#33"'*' is deprecated (declared at *)0(0#0#66"/Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm4300885448#1941"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch -c /Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.mm -o /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/PhraseViewController.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o /Users/dgraham/Documents/workspace/Bunpou/2/XFSMInterface.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s289118051.066364
-e289118051.376686
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o
-x/Users/dgraham/Documents/workspace/Bunpou/2/XFSMInterface.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@69"Compile /Users/dgraham/Documents/workspace/Bunpou/2/XFSMInterface.cpp289118051#289118051#0(0"0(0#0#61"/Users/dgraham/Documents/workspace/Bunpou/2/XFSMInterface.cpp4300885448#1929"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-eajbfidutqchocejmtjqonjwcutz/Prefix.pch -c /Users/dgraham/Documents/workspace/Bunpou/2/XFSMInterface.cpp -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o /Users/dgraham/Documents/workspace/iBunpou/XFSMInterface.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s296103144.778154
-e296103145.298882
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o
-x/Users/dgraham/Documents/workspace/iBunpou/XFSMInterface.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@68"Compile /Users/dgraham/Documents/workspace/iBunpou/XFSMInterface.cpp296103144#296103145#0(0"0(0#0#60"/Users/dgraham/Documents/workspace/iBunpou/XFSMInterface.cpp4300885448#1918"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-hhdjrqeudjiuzbajimsqisamoiqc/Prefix.pch -c /Users/dgraham/Documents/workspace/iBunpou/XFSMInterface.cpp -o /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/XFSMInterface.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o /Users/dgraham/Documents/workspace/Bunpou/2/main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s286955371.564465
-e286955371.606350
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o
-x/Users/dgraham/Documents/workspace/Bunpou/2/main.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/dgraham/Documents/workspace/Bunpou/2/main.mm286955371#286955371#0(0"0(0#0#51"/Users/dgraham/Documents/workspace/Bunpou/2/main.mm4300885448#1920"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-bhljqqyrzytgmkgfkvskulfgjzvg/Prefix.pch -c /Users/dgraham/Documents/workspace/Bunpou/2/main.mm -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o0#
-
-CCompileC build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o /Users/dgraham/Documents/workspace/iBunpou/main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296452409.973464
-e296452412.054085
-r1
-xCompileC
-xbuild/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o
-x/Users/dgraham/Documents/workspace/iBunpou/main.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@58"Compile /Users/dgraham/Documents/workspace/iBunpou/main.mm296452410#296452412#0(0"0(0#0#50"/Users/dgraham/Documents/workspace/iBunpou/main.mm3414973617650413056#1909"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -include /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch -c /Users/dgraham/Documents/workspace/iBunpou/main.mm -o /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.xib
-s296032954.624743
-e296032957.431978
-r1
-xCompileXIB
-x/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.xib
-lSLF07#2@35"CompileXIB PhraseViewController.xib296032954#296032957#0(0"0(0#0#68"/Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.xib4300885448#519"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/PhraseViewController.nib /Users/dgraham/Documents/workspace/Bunpou/2/PhraseViewController.xib0#
-
-CCompileXIB /Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainView.xib
-s286955387.576022
-e286955388.285951
-r1
-xCompileXIB
-x/Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainView.xib
-lSLF07#2@32"CompileXIB en.lproj/MainView.xib286955387#286955388#0(0"0(0#0#65"/Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainView.xib4300885448#513"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/en.lproj/MainView.nib /Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainView.xib0#
-
-CCompileXIB /Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainWindow.xib
-s296024225.589457
-e296024226.025033
-r1
-xCompileXIB
-x/Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainWindow.xib
-o/* com.apple.ibtool.document.warnings */
-o/Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainWindow.xib:-1: warning: The 'delegate' outlet of 'File's Owner' is connected to 'AppDelegate' but 'delegate' is no longer defined on AppDelegate.
-lSLF07#2@34"CompileXIB en.lproj/MainWindow.xib296024225#296024226#0(244"/* com.apple.ibtool.document.warnings *//Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainWindow.xib:-1: warning: The 'delegate' outlet of 'File's Owner' is connected to 'AppDelegate' but 'delegate' is no longer defined on AppDelegate.1(22@121"The 'delegate' outlet of 'File's Owner' is connected to 'AppDelegate' but 'delegate' is no longer defined on AppDelegate.296024226#18446744073709551615#0#0(6@67"/Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainWindow.xib296023862#18446744073709551615#0#18446744073709551615#0#0"0(0#0#67"/Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainWindow.xib4300885448#517"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/en.lproj/MainWindow.nib /Users/dgraham/Documents/workspace/Bunpou/2/en.lproj/MainWindow.xib0#
-
-CCompileXIB /Users/dgraham/Documents/workspace/iBunpou/PhraseViewController.xib
-r0
-
-CCompileXIB /Users/dgraham/Documents/workspace/iBunpou/en.lproj/MainView.xib
-r0
-
-CCompileXIB /Users/dgraham/Documents/workspace/iBunpou/en.lproj/MainWindow.xib
-r0
-
-CCpResource build/Debug-iphonesimulator/TableSearch.app/full.fst full.fst
-s295247609.709658
-e295247610.181902
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TableSearch.app/full.fst
-xfull.fst
-lSLF07#2@13"Copy full.fst295247609#295247610#0(0"0(0#0#52"/Users/dgraham/Documents/workspace/Bunpou/2/full.fst31525648366108776#471"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dgraham/Documents/workspace/Bunpou/2/full.fst /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app0#
-
-CCpResource build/Debug-iphonesimulator/TableSearch.app/kr_converter.fst kr_converter.fst
-s288863932.038704
-e288863932.175091
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TableSearch.app/kr_converter.fst
-xkr_converter.fst
-lSLF07#2@21"Copy kr_converter.fst288863932#288863932#0(0"0(0#0#60"/Users/dgraham/Documents/workspace/Bunpou/2/kr_converter.fst4300885448#479"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dgraham/Documents/workspace/Bunpou/2/kr_converter.fst /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app0#
-
-CCpResource build/Debug-iphonesimulator/TableSearch.app/rk_converter.fst rk_converter.fst
-s288368923.598985
-e288368923.640089
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TableSearch.app/rk_converter.fst
-xrk_converter.fst
-lSLF07#2@21"Copy rk_converter.fst288368923#288368923#0(0"0(0#0#60"/Users/dgraham/Documents/workspace/Bunpou/2/rk_converter.fst30118312137392240#479"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dgraham/Documents/workspace/Bunpou/2/rk_converter.fst /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app0#
-
-CGenerateDSYMFile /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app.dSYM /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-s296050607.893420
-e296050607.926462
-r1
-xGenerateDSYMFile
-x/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app.dSYM
-x/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-lSLF07#2@121"GenerateDSYMFile build/Debug-iphonesimulator/TableSearch.app.dSYM build/Debug-iphonesimulator/TableSearch.app/TableSearch296050607#296050607#0(0"0(0#0#99"/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch4300885448#410"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app.dSYM0#
-
-CGenerateDSYMFile /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app.dSYM /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-s296452414.087611
-e296452414.174727
-r1
-xGenerateDSYMFile
-x/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app.dSYM
-x/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-lSLF07#2@121"GenerateDSYMFile build/Debug-iphonesimulator/TableSearch.app.dSYM build/Debug-iphonesimulator/TableSearch.app/TableSearch296452414#296452414#0(0"0(0#0#98"/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch4300885448#407"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch -o /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app.dSYM0#
-
-CLd /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch normal i386
-s296050607.853589
-e296050607.892517
-r1
-xLd
-x/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-xnormal
-xi386
-lSLF07#2@104"Link /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch296050607#296050607#0(0"0(0#0#0"4300885448#1032"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -L/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator -L/Users/dgraham/Desktop/xfsm_api/macosx/lib -L/Users/dgraham/Documents/workspace/Bunpou/2/lib -F/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator -filelist /Users/dgraham/Documents/workspace/Bunpou/2/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/TableSearch.LinkFileList -mmacosx-version-min=10.5 -lbreadline -lxcfsm -framework Foundation -framework UIKit -framework CoreGraphics -lbreadline -lxcfsm -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/TableSearch0#
-
-CLd /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch normal i386
-s296452413.130924
-e296452414.087420
-r1
-xLd
-x/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch
-xnormal
-xi386
-lSLF07#2@103"Link /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch296452413#296452414#0(0"0(0#0#0"32932993188560964#1026"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -L/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -L/Users/dgraham/Desktop/xfsm_api/macosx/lib -L/Users/dgraham/Documents/workspace/iBunpou/lib -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -filelist /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/Objects-normal/i386/TableSearch.LinkFileList -mmacosx-version-min=10.5 -lbreadline -lxcfsm -framework Foundation -framework UIKit -framework CoreGraphics -lbreadline -lxcfsm -o /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/TableSearch0#
-
-CProcessInfoPlistFile /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/Info.plist Info.plist
-s286955387.570226
-e286955387.575265
-r1
-xProcessInfoPlistFile
-x/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/Info.plist
-xInfo.plist
-lSLF07#2@18"Process Info.plist286955387#286955387#0(0"0(0#0#54"/Users/dgraham/Documents/workspace/Bunpou/2/Info.plist4300885448#494"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Info.plist -genpkginfo /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app/Info.plist0#
-
-CProcessInfoPlistFile /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app/Info.plist Info.plist
-r0
-
-CProcessPCH++ /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch.gch Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s296103143.252985
-e296103144.421353
-r1
-xProcessPCH++
-x/var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch.gch
-xPrefix.pch
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@21"Precompile Prefix.pch296103143#296103144#0(0"0(0#0#53"/Users/dgraham/Documents/workspace/iBunpou/Prefix.pch3419202321905706496#1790"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -c /Users/dgraham/Documents/workspace/iBunpou/Prefix.pch -o /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-anvyrjeqriexymdqevkdjeqwqicy/Prefix.pch.gch0#
-
-CProcessPCH++ /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-bhljqqyrzytgmkgfkvskulfgjzvg/Prefix.pch.gch Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
-r0
-
-CProcessPCH++ /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-eajbfidutqchocejmtjqonjwcutz/Prefix.pch.gch Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
-r0
-
-CProcessPCH++ /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-hhdjrqeudjiuzbajimsqisamoiqc/Prefix.pch.gch Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
-s296103143.291111
-e296103143.743166
-r1
-xProcessPCH++
-x/var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-hhdjrqeudjiuzbajimsqisamoiqc/Prefix.pch.gch
-xPrefix.pch
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@21"Precompile Prefix.pch296103143#296103143#0(0"0(0#0#53"/Users/dgraham/Documents/workspace/iBunpou/Prefix.pch4300885448#1780"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-generated-files.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-own-target-headers.hmap -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-all-target-headers.hmap -iquote /Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/TableSearch-project-headers.hmap -F/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator -I/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/include -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources/i386 -I/Users/dgraham/Documents/workspace/iBunpou/build/Bunpou.build/Debug-iphonesimulator/Bunpou.build/DerivedSources -c /Users/dgraham/Documents/workspace/iBunpou/Prefix.pch -o /var/folders/rm/rmKRCnoIERyoOKzOZsQJkE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Prefix-hhdjrqeudjiuzbajimsqisamoiqc/Prefix.pch.gch0#
-
-CTouch /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app
-s296050607.926557
-e296050607.928874
-r1
-xTouch
-x/Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app
-lSLF07#2@93"Touch /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app296050607#296050607#0(0"0(0#0#0"4300885448#292"    cd /Users/dgraham/Documents/workspace/Bunpou/2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/dgraham/Documents/workspace/Bunpou/2/build/Debug-iphonesimulator/TableSearch.app0#
-
-CTouch /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app
-s296452414.174810
-e296452414.177745
-r1
-xTouch
-x/Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app
-lSLF07#2@92"Touch /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app296452414#296452414#0(0"0(0#0#0"4300885448#290"    cd /Users/dgraham/Documents/workspace/iBunpou    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/dgraham/Documents/workspace/iBunpou/build/Debug-iphonesimulator/TableSearch.app0#
-

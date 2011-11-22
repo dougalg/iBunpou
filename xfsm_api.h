@@ -36,12 +36,10 @@ extern "C" {
 
 #include <stdio.h>
 
-#ifdef HAVE_STDINT_H
+#ifndef _WIN32
 #include <stdint.h>
 #else
-#ifndef _WIN32
-
-#endif
+#include "win_stdint.h"
 #endif
 
 #ifdef _WIN32
@@ -56,7 +54,7 @@ extern "C" {
 
 #ifndef BIT_DEFINED
 #define BIT_DEFINED
-  typedef unsigned short bit;
+  typedef uint32_t bit;
 #endif
 #ifndef BYTE_DEFINED
 #define BYTE_DEFINED
@@ -157,6 +155,12 @@ extern "C" {
    ****************/
 
   typedef struct STACK STACKtype, *STACKptr;
+
+  /****************
+   * INPUT BUFFER
+   ****************/
+
+  typedef struct INPUT_BUFFER IN_BUFERtype, *IN_BUFFERptr;
 
   /******************
    * UNICODE STRINGS
@@ -282,6 +286,11 @@ extern "C" {
      increments the position counter. The length of the vector is
      adjusted if needed. Returns the new value of the position counter. */
 
+  int set_lab_vector_element_at(id_type lab, int pos, LAB_VECTORptr lab_vect);
+  /* Stores the label in the given position in the label vector. The
+     length of the label vector is adjusted if needed. Returns the
+     value of the position counter. */
+
   int lab_vector_element_at(id_type *lab, int pos, LAB_VECTORptr lab_vect);
   /* Sets *lab to the label in the given position. Returns 0 on success,
      1 if the position is outside the filled part of the vector. */
@@ -327,13 +336,18 @@ extern "C" {
      the position counter. Allocates more vector space if needed.
      Returns the new value of the position counter. */
 
-  void reset_vector(VECTORptr vector);
-  /* Sets the position counter of vector to 0. */
-
   int vector_element_at(void **element, int pos, VECTORptr *vector);
   /* Sets *element to the object in the given position. Returns 0
      on success, 1 if pos is greater or equal to the value of the
      vector's position counter. */
+
+  int set_vector_element_at(void *element, int pos, VECTORptr vector);
+  /* Stores the element in the given position in the vector. The
+     length of the vector is adjusted if needed. Returns the value of
+     the position counter. */
+
+  void reset_vector(VECTORptr vector);
+  /* Sets the position counter of vector to 0. */
 
   typedef struct LAB_RING LAB_RINGtype, *LAB_RINGptr;
 
@@ -364,14 +378,16 @@ extern "C" {
   typedef struct LABEL {
     id_type id;          /* Unique ID for a symbol or symbol pair. */
     id_type other_id;    /* Place to store some related label ID. */
-    short arity;         /* 1 for atomic label, 2 for pairs */
     void *data;          /* a cache for storing some information about
                             the label such as type or print name */
     FLAG_DIACRptr flag;  /* NULL for labels that are not flag diacritics. */
-    int convertable;     /* TRUE if case conversion makes sense. */
-    int expands_other;   /* TRUE if covered by OTHER */
-    int data_type;       /* The type of data stored in the data field:
-                            0 = Unknown, 1 = Network, 2 = Alphabet,
+    unsigned short arity;         /* 1 for atomic label, 2 for pairs */
+    unsigned short expands_other;   /* TRUE if covered by OTHER */
+    unsigned short consumes_input;   /* Not an epsilon transition */
+    unsigned short convertible;     /* TRUE if case conversion makes sense. */
+    unsigned short closing_xml_tag;  /* Is of the form </....> */
+    unsigned short data_type;       /* The type of data stored in the data field:
+                            0 = CFSMUnknown, 1 = Network, 2 = Alphabet,
                             3 = Integer, 4 = Other */
     union {
       FAT_STR name;      /* Name of an atomic label. */
@@ -391,8 +407,10 @@ extern "C" {
 #define LABEL_flag(X)          (X)->flag
 #define LABEL_name(X)          (X)->content.name
 #define LABEL_tuple(X)         (X)->content.tuple
-#define LABEL_convertable(X)   (X)->convertable
+#define LABEL_convertible(X)   (X)->convertible
 #define LABEL_expands_other(X) (X)->expands_other
+#define LABEL_consumes_input(X)(X)->consumes_input
+#define LABEL_closing_xml_tag(X)(X)->closing_xml_tag
 #define LABEL_data_type(X)     (X)->data_type
 
   int print_label(id_type id, FILE *stream, int escape_p);
@@ -736,7 +754,7 @@ extern "C" {
       bit has_arc_user_pointer:1;
       bit closed_sigma:1;
       bit start_state_final:1;
-      bit obsolete1:1;
+      bit lower_bound_checked:1;
       bit compacted:1;
       bit obsolete2:1;
       bit obsolete3:1;
@@ -754,6 +772,7 @@ extern "C" {
       bit has_arc_vectors:1;
       bit linear_bounded_upper:1;
       bit linear_bounded_lower:1;
+      bit upper_bound_checked:1;
     } flags;
     int16 arc_label_arity;
     id_type defined_as;
@@ -833,6 +852,8 @@ extern "C" {
 #define NET_has_arc_vectors(X)           (X)->flags.has_arc_vectors
 #define NET_linear_bounded_upper(X)      (X)->flags.linear_bounded_upper
 #define NET_linear_bounded_lower(X)      (X)->flags.linear_bounded_lower
+#define NET_lower_bound_checked(X)       (X)->flags.lower_bound_checked
+#define NET_upper_bound_checked(X)       (X)->flags.upper_bound_checked
 #define NET_arc_label_arity(X)           (X)->arc_label_arity
 #define NET_num_arcs(X)                  (X)->num_arcs
 #define NET_num_states(X)                (X)->num_states
@@ -1457,6 +1478,23 @@ extern "C" {
   /* Returns a pointer to the structure allocated and initialized by
      initialize_cfsm(). */
 
+  int check_for_input_encoding(int *char_encoding, FILE *stream);
+  /* Looks at the current position in the stream to see if it gives
+     an indication of the character encoding for the file, that is,
+     either a BOM (Byte Order Mark) or an Emacs-style character
+     encoding declaration of the form
+     # -*- coding: utf-8 -*-
+     or
+     # -*- coding: iso-8859-1 -*-
+     If that is the case, the *char_encoding is set to either
+     CHAR_ENC_UTF_8 or CHAR_ENC_ISO_8859_1 and the file position
+     in the stream moves to the first byte beyond the character
+     encoding indication. If no character encoding indication is
+     found *char_encoding is set to CHAR_ENC_UNKNOWN and the file
+     position in the stream remains unchanged. Returns 0 unless
+     some unexpected error occurs. In that case the return value
+     is 1. */
+
   int set_char_encoding(FST_CNTXTptr cntxt, int code);
   /* Sets the character encoding mode of the cntxt. The code must be
      either CHAR_ENC_UTF_8 or CHAR_ENC_ISO_8859_1. Returns 0 on
@@ -1635,6 +1673,7 @@ extern "C" {
     VECTORptr start_vector;
     VECTORptr task_vector;
     VECTOR_TABLEptr pos_table;
+    IN_BUFFERptr in_buffer;
     STRING_BUFFERptr out_buffer;
     STRING_BUFFERptr save_buffer;
     void *hyper_unit;
@@ -1669,11 +1708,9 @@ extern "C" {
      apply_network(), apply_patterns(), and compose_apply(). The input
      to an apply operation is a string or a stream or a table of label
      vectors. The output is collected into a string buffer, into an
-     array of label vectors or compiled into a network. The applied
-     network may be of different types: a standard network, or a
-     with optimized data structures The APPLY_CONTEXT data structure
-     contains data fields for all the different flavors of apply.
-     Any particular apply operation will only have use for some of
+     array of label vectors or compiled into a network. The APPLY_CONTEXT
+     data structure contains data fields for all the different flavors of
+     apply. Any particular apply operation will only have use for some of
      them. */
 
 #define APPLY_reclaimable(X)            (X)->reclaimable
@@ -1723,6 +1760,7 @@ extern "C" {
 #define APPLY_state_vector(X)           (X)->state_vector
 #define APPLY_dest_vector(X)            (X)->destination_vector
 #define APPLY_task_vector(X)            (X)->task_vector
+#define APPLY_in_buffer(X)              (X)->in_buffer
 #define APPLY_out_buffer(X)             (X)->out_buffer
 #define APPLY_save_buffer(X)            (X)->save_buffer
 #define APPLY_hyper_unit(X)             (X)->hyper_unit
@@ -1782,7 +1820,8 @@ extern "C" {
   /* The data structure for a tokenizer. */
 
   TOKptr new_tokenizer(NETptr token_fst, char *in_string, FILE *in_stream,
-                       id_type token_boundary, id_type fail_token);
+                       id_type token_boundary, id_type fail_token,
+		       FST_CNTXTptr fst_cntxt);
   /* Returns a new tokenizer using token_fst either for the input in
      in_string or the file in_stream.One of the two arguments,
      in_string or in_stream, must be NULL, the other one must be
@@ -1796,7 +1835,8 @@ extern "C" {
      occurs. */
 
   TOKptr make_tokenizer(char *fst_file, char *in_string, char *in_file,
-                        char *token_bound, char *fail_token);
+                        char *token_bound, char *fail_token,
+			FST_CNTXTptr fst_cntxt);
   /* Returns a new tokenizer obtained by calling new_tokenizer() with
      the expected arguments. One of the two arguments, in_string or
      in_file, must be NULL, the other one must be a string.  The
@@ -1812,7 +1852,8 @@ extern "C" {
   /* Returns the next token network or NULL when the input has been
      exhausted. */
 
-  int restart_tokenizer(TOKptr tok, char *string, FILE *stream);
+  /*Commenting as the definition was commented out*/
+  /*int restart_tokenizer(TOKptr tok, char *string, FILE *stream);*/
   /* Restarts the tokenizer tok on a new input string. */
 
   void free_tokenizer(TOKptr tok);
@@ -2041,14 +2082,13 @@ extern "C" {
      calls new_applyer() with these parameters and returns the apply
      context, or NULL if an error occurs. */
 
-  STRING_BUFFERptr next_apply_output(APPLYptr applyer);
-  /* Returns a string buffer containing the output strings of the next
-     application in the given apply context.If the input is from a
-     string, the entire string is consumed. If the output is from a
-     stream, the input consists of the the next line ignoring the final
-     eol_string. Returns NULL if the input has been exhausted. Otherwise
-     the return value is a pointer to the output buffer of the applyer
-     containing any number of output strings, possibly none, for the
+  int next_apply_output(APPLYptr applyer);
+  /* Returns zero if successful, and an int error code if not.  
+     If the input is from a string, the entire string is consumed. 
+     If the output is from a stream, the input consists of the the 
+     next line ignoring the final eol_string. Returns 1 if the
+     input has been exhausted. Otherwise the output buffer of the applyer
+     will contain any number of output strings, possibly none, for the
      last input, separated by the eol_string of the applyer (default =
      "\n"). The output can be displayed with print_string_buffer(). The
      next call to next_apply_output() will overwrite the previous

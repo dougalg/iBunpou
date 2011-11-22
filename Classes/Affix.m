@@ -12,14 +12,14 @@
 
 @synthesize fstCode, sForms, hFormShort, hFormLong;
 
-+ (id)initWithFstCode:(NSString *)anFstCode andAffixArray:(NSArray *)allAffixes andPOS:(NSString *)POS
++ (id)initWithFstCode:(NSString *)anFstCode andSForms:(NSArray *)sFormsIn andAffixArray:(NSArray *)allAffixes andPOS:(NSString *)POS
 {
 	Affix *newAffix = [[[self alloc] init] autorelease];
 	
 	NSDictionary *relatedAffix = [self findRelatedAffixFromFSTCode:anFstCode andAffixArray:allAffixes andPOS:POS];
 	
 	newAffix.fstCode = anFstCode;
-	newAffix.sForms = [relatedAffix objectForKey:@"sForms"];
+	newAffix.sForms = sFormsIn;
 	newAffix.hFormShort = [relatedAffix objectForKey:@"hFormShort"];	
 	return newAffix;
 }

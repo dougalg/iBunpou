@@ -16,7 +16,7 @@ struct XFSMWrapOpaque;
 }
 
 - (id)initializeWithFSTName:(NSString *)fstName;
-- (NSString *)getApplyResultsUp:(NSString *)queryStr;
-- (NSString *)getApplyResultsDown:(NSString *)queryStr;
+- (NSArray *)getApplyResultsUp:(NSString *)queryStr;
+- (NSArray *)getApplyResultsDown:(NSString *)queryStr;
 
 @end

@@ -23,7 +23,7 @@
 @property (nonatomic, copy) NSString *hFormShort;
 @property (nonatomic, copy) NSString *hFormLong;
 
-+ (id)initWithFstCode:(NSString *)anFstCode andAffixArray:(NSArray *)allAffixes andPOS:(NSString *)POS;
++ (id)initWithFstCode:(NSString *)anFstCode andSForms:(NSArray *)sFormsIn andAffixArray:(NSArray *)allAffixes andPOS:(NSString *)POS;
 + (NSDictionary*)findRelatedAffixFromFSTCode:(NSString *)anFstCode andAffixArray:(NSArray *)allAffixes andPOS:(NSString *)POS;
 
 @end
