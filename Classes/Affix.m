@@ -28,10 +28,7 @@
 {
 	for (id permAffix in allAffixes) {
 		if ([anFstCode isEqualToString:[permAffix objectForKey: @"fstCode"]]) {
-			// Some special cases require checking the category
-			if ([POS isEqualToString:[permAffix objectForKey: @"category"]]) {
-				return permAffix;
-			}
+			return permAffix;
 		}
 	}
 	return [[[NSDictionary alloc] init] autorelease];

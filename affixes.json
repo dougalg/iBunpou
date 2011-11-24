@@ -1,419 +1,211 @@
 [
     {
-        "category":"adj-t",
-        "fstCode" : "taru",
-        "sForms" : [
-            "+たる",
-        ],
+        "fstCode" : "TARU",
         "hFormShort" : "",
         "hFormLong" : "",
     },
     {
-        "category":"adj-t",
-        "fstCode" : "to",
-        "sForms" : [
-            "+と",
-        ],
+        "fstCode" : "TO",
         "hFormShort" : "",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "DE",
-        "sForms" : [
-            "+で",
-        ],
-        "hFormShort" : "て form",
+        "hFormShort" : "Continuative copula",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "SOU",
-        "sForms" : [
-            "+そう",
-        ],
-        "hFormShort" : "",
+        "hFormShort" : "Looks like...",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "GSTEM",
-        "sForms" : [
-            "",
-        ],
         "hFormShort" : "",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
-        "fstCode" : "VOL",
-        "sForms" : [
-            "+かろう",
-        ],
-        "hFormShort" : "Volitional",
-        "hFormLong" : "",
-    },
-    {
-        "category":"adj-i",
         "fstCode" : "ADV",
-        "sForms" : [
-            "+く",
-        ],
         "hFormShort" : "Adverb",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "SUGIRU",
-        "sForms" : [
-            "+過ぎ",
-        ],
         "hFormShort" : "too X",
-        "hFormLong" : "Sugiru is conjugated as an ichidan verb",
+        "hFormLong" : "Sugiru is conjugated as an ichidan verb.",
     },
     {
-        "category":"adj-i",
         "fstCode" : "DEG",
-        "sForms" : [
-            "+さ",
-        ],
         "hFormShort" : "Degree",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "NARU",
-        "sForms" : [
-            "+なる",
-        ],
         "hFormShort" : "Become",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "TE",
-        "sForms" : [
-            "+て",
-        ],
         "hFormShort" : "て form",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "NEG=POLITE",
-        "sForms" : [
-            "+ありません",
-        ],
         "hFormShort" : "Polite negative",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "NEG=POLITE=PAST",
-        "sForms" : [
-            "+ありませんでした",
-        ],
         "hFormShort" : "Polite past negative",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "NEG=PLAIN",
-        "sForms" : [
-            "+な",
-            "+は な",
-        ],
         "hFormShort" : "Plain negative",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "NPAST",
-        "sForms" : [
-            "+い",
-        ],
         "hFormShort" : "Non-past",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "PAST",
-        "sForms" : [
-            "+かった",
-        ],
         "hFormShort" : "Past",
         "hFormLong" : "",
     },
     {
-        "category":"adj-i",
         "fstCode" : "COND",
-        "sForms" : [
-            "+ければ",
-        ],
         "hFormShort" : "Conditional",
         "hFormLong" : "",
     },
     {
-        "category":"v1",
         "fstCode" : "PLAIN",
-        "sForms" : [
-            "+う",
-        ],
         "hFormShort" : "Plain form",
         "hFormLong" : "",
     },
     {
-        "category":"v1",
         "fstCode" : "IMP",
-        "sForms" : [
-            "+ろ",
-            "+よ"
-        ],
         "hFormShort" : "Imperative",
         "hFormLong" : "",
     },
     {
-        "category":"v1",
         "fstCode" : "VOL",
-        "sForms" : [
-            "+よう",
-        ],
         "hFormShort" : "Volitional",
         "hFormLong" : "",
     },
     {
-        "category":"v1",
         "fstCode" : "VOL=NEG",
-        "sForms" : [
-            "+まい",
-        ],
         "hFormShort" : "Negative Volitional",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "CONT",
-        "sForms" : [
-            "+い",
-        ],
         "hFormShort" : "Continuative",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "IMPF",
-        "sForms" : [
-            "+あ",
-        ],
         "hFormShort" : "Imperfective",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "PASS",
-        "sForms" : [
-            "+あ",
-        ],
         "hFormShort" : "Passive",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "CAUS",
-        "sForms" : [
-            "+あ",
-        ],
         "hFormShort" : "Causative",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "HYP",
-        "sForms" : [
-            "+え",
-        ],
         "hFormShort" : "Hypothetical",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "TAI",
-        "sForms" : [
-            "+たい"
-        ],
         "hFormShort" : "Want to...",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "PAST",
-        "sForms" : [
-            "+た"
-        ],
         "hFormShort" : "Past",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "TE",
-        "sForms" : [
-            "+て",
-        ],
-        "hFormShort" : "",
+        "hFormShort" : "て form",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "CHAU",
-        "sForms" : [
-            "+ちゃ",
-        ],
         "hFormShort" : "",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "NOWAY",
-        "sForms" : [
-            "は　しな",
-        ],
         "hFormShort" : "",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "IMP=POLITE",
-        "sForms" : [
-            "なさい",
-        ],
         "hFormShort" : "",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "IMP=POLITE=NEG",
-        "sForms" : [
-            "+なするな"
-        ],
         "hFormShort" : "",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "EASY",
-        "sForms" : [
-            "+易"
-        ],
         "hFormShort" : "Easy to...",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "HARD",
-        "sForms" : [
-            "難"
-        ],
         "hFormShort" : "Hard to...",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "SUGIRU",
-        "sForms" : [
-            "+すぎ"
-        ],
         "hFormShort" : "too..",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "POLITE",
-        "sForms" : [
-            "+ます"
-        ],
         "hFormShort" : "Polite form",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "PAST",
-        "sForms" : [
-            "+た"
-        ],
         "hFormShort" : "Past",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "NEG",
-        "sForms" : [
-            "+えん"
-        ],
         "hFormShort" : "Negative",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
-        "fstCode" : "PAST",
-        "sForms" : [
-            "でした"
-        ],
-        "hFormShort" : "Past",
-        "hFormLong" : "",
-    },
-    {
-        "category":"v5",
         "fstCode" : "SURE",
-        "sForms" : [
-            "+すれ"
-        ],
         "hFormShort" : "",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
         "fstCode" : "ZU",
-        "sForms" : [
-            "+ず"
-        ],
         "hFormShort" : "Without",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
-        "fstCode" : "NEG",
-        "sForms" : [
-            "+な"
-        ],
-        "hFormShort" : "Negative",
-        "hFormLong" : "",
-    },
-    {
-        "category":"v5",
         "fstCode" : "MUST",
-        "sForms" : [
-            "+なければならない",
-            "+なきゃ",
-            "+なくちゃ"
-        ],
         "hFormShort" : "Required action",
         "hFormLong" : "",
     },
     {
-        "category":"v5",
-        "fstCode" : "VOL",
-        "sForms" : [
-            "+う"
-        ],
-        "hFormShort" : "",
-        "hFormLong" : "",
-    },
-    {
-        "category":"",
         "fstCode" : "",
-        "sForms" : [
-            ""
-        ],
         "hFormShort" : "",
         "hFormLong" : "",
     }
